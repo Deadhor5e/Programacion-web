@@ -16,6 +16,7 @@ body {
     background-color: #333;
     color: blanchedalmond;
     font-size: 16px;
+    padding: 10px;
 }
 
 header {
@@ -25,6 +26,15 @@ header {
 nav {
     color: brown;
     text-align: center;
+}
+
+nav a:hover {
+    border-bottom: 2px solid cornflowerblue;
+}
+
+aside {
+    border-left: 2px solid rgba(227, 91, 18, 0.84);
+    padding: 10px 10px;
 }
 
 ul {
@@ -40,6 +50,10 @@ li {
     width: 6em;
     text-decoration: none;
   }
+
+.aside-img {
+    padding: 10px;
+}
 
 .ul-footer {
     display: auto;
@@ -88,12 +102,31 @@ li {
 
 .footer {
     grid-area: footer;
+    font-style: oblique;
 }
 
 a {
     color: rgb(222, 114, 37);
     text-decoration: none;
     font-weight: 700;
+}
+
+.galery {
+    display: grid;
+    grid-auto-flow: auto;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 30%));
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid rgb(222, 114, 37);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.galery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px #a19d9dc9;
 }
 
 @media (max-width: 767px) {
@@ -107,11 +140,31 @@ a {
         "footer";
     }
 
+    body {
+        padding: 10px;
+        font-size: 22px;
+    }
+
     header {
         margin: auto;
     }
 
     ul {
         flex-direction: column;
+    }
+
+    .aside {
+        border: 0;
+        padding: 0;
+    }
+
+    .aside-img {
+        width: 30%;
+        height: auto;
+        max-width: 30%;
+    }
+
+    .main {
+        border-bottom: 2px solid chocolate;
     }
 }
