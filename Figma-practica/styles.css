@@ -30,13 +30,13 @@ a {
     text-decoration: none;
 }
 
+main {
+    padding: 10px;
+}
+
 .barras {
     border-left: 2px solid rgba(78, 76, 76, 0.765);
     border-right: 2px solid rgba(78, 76, 76, 0.765);;
-}
-
-main {
-    padding: 10px;
 }
 
 .main-header {
@@ -67,10 +67,6 @@ main {
     border-color: #D9D9D9;
     padding: 0px 50px;
     }
-
-.footer-nav-redes {
-    
-}
 
 .informacion1 {
     margin-top: 20px;
@@ -110,7 +106,7 @@ main {
     justify-items: center;
 }
 
-.secondary-nav > img {
+.secondary-nav img {
     width: 20px;
     height: 17px;
 }
@@ -240,3 +236,6 @@ main {
         "aside"
         "footer";
     }
+
+
+}
