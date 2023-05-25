@@ -84,3 +84,5 @@ let verdad = true;
 console.log({verdad}); //TRUE
 let mentira = !verdad; 
 console.log({mentira}); //FALSE
+
+//Control de Flujo
