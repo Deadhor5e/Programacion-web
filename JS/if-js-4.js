@@ -1,6 +1,6 @@
 const variable1 = 1;
-const variable2 = 1;
-const variable3 = 1;
+const variable2 = 2;
+const variable3 = 23;
 
 if (variable1>variable2&&variable1>variable3) {
     document.write(`<p>Lista de numeros: ${variable1}, ${variable2}, ${variable3}.</p>`);
