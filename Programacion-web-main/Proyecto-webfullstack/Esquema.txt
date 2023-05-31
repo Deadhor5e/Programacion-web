@@ -1,4 +1,0 @@
-Cliente
-Gestor
-Trasnferencia
-Mensajes
