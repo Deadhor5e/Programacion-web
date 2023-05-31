@@ -45,6 +45,29 @@ a {
     margin: 30px 0;
 }
 
+.div-dashboard {
+    border: 5px solid grey;
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dash-cliente {
+    border: 5px solid grey;
+}
+
+.dash-ingreso {
+    border: 5px solid grey;
+}
+
+.ul-cliente {
+    display: block;
+}
+
+.ul-ingreso {
+    display: block;
+}
+
 .main {
     display: grid;
     grid-template-columns: auto;
