@@ -1,0 +1,76 @@
+/* Estilo para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Estilo para los encabezados */
+  h1, h2, h3 {
+    color: #555;
+  }
+  
+  /* Estilo para los enlaces */
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo para los párrafos */
+  p {
+    line-height: 1.5;
+  }
+  
+  /* Estilo para la lista no ordenada */
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  /* Estilo para los elementos de la lista */
+  li {
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para las imágenes */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Estilo para el formulario */
+  form {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para los campos de entrada */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para el botón de envío */
+  input[type="submit"] {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0052a3;
+  }
