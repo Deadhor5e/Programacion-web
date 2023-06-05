@@ -32,7 +32,7 @@ const champions = [
 
 // Interacción con el formulario [GUARDAR]
 let formChampions = document.querySelector("#form-champions");
-formChampions.addEventListener("#submit", function (event) {
+formChampions.addEventListener("submit", function (event) {
     event.preventDefault();
 
     let inputName = document.querySelector("#champions-name").value;
@@ -43,8 +43,8 @@ formChampions.addEventListener("#submit", function (event) {
 });
 
 // Guardado en local
-// let championsJSON = JSON.stringify(champions);
-// localStorage.setItem("champions", championsJSON);
+let championsJSON = JSON.stringify(champions);
+localStorage.setItem("champions", championsJSON);
 
 let championsSaveLocal = localStorage.getItem("champions");
 let championsArray = JSON.parse(championsSaveLocal) || [];
@@ -63,31 +63,19 @@ function saveNewChampion(name, position, release) {
     alert("¡Campeón guardado!");
 }
 
-// Borrar campeon [BORRAR]
-formChampions = document.querySelector("#form-champions");
-formChampions.addEventListener("#delte", function (event) {
-    event.preventDefault();
-
-    inputName = document.querySelector("#champions-name").value;
-    inputPosition = document.querySelector("#champions-position").value;
-    inputRelease = document.querySelector("#champions-release").value;
-
-    // delteNewChampion(inputName, inputPosition, inputRelease);
-});
-
 championsSaveLocal = localStorage.getItem("champions");
 championsArray = JSON.parse(championsSaveLocal) || [];
 
 //Borrar campeon (funcion)
-function saveNewChampion(name, position, release) {
-    let newChampion = {
-        name: name,
-        position: position,
-        release: release,
-    };
-    championsArray.push(newChampion);
-
+function clearList() {
+    championsArray = [];
     let championsJSON = JSON.stringify(championsArray);
     localStorage.setItem("champions", championsJSON);
-    alert("¡Campeón borrado!");
+    alert("¡Lista borrada!");
 }
+
+let vaciarLista = document.querySelector("#form-champions");
+document.getElementById("delete").addEventListener("click", function (event) {
+    event.preventDefault();
+    clearList();
+});
