@@ -21,9 +21,6 @@ function actualizarPokemon(pokemon) {
     document.body.appendChild(article);
 }
 
-//10 Pokemon aleatorios
-
-
 //Funcion para realiza la funcion GET utilizando la funcion fetch
 function getPokemon(id) {
         fetch("https://pokeapi.co/api/v2/pokemon/" + id )
@@ -70,10 +67,33 @@ pokeID.addEventListener("click", function (event) {
 });
 
 //Limpiar lista pokemon
-let pokeClear = document.querySelector("#bnt-clear");
+let pokeClear = document.querySelector("#btn-clear");
 pokeClear.addEventListener("click", function (event) {
     event.preventDefault();
 
     limpiarPokemon();
 });
 
+//Siguiente
+let pokeSiguiente = document.querySelector("#btn-siguiente");
+pokeSiguiente.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    limpiarPokemon();
+    let siguienteID = parseInt(document.querySelector("#busqueda-id").value);
+    siguienteID++;
+    getPokemon(siguienteID);
+    document.querySelector("#busqueda-id").value = siguienteID;
+});
+
+//Anterior
+let pokeAnterior = document.querySelector("#btn-anterior");
+pokeAnterior.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    limpiarPokemon();
+    let anteriorID = (document.querySelector("#busqueda-id").value);
+    anteriorID--;
+    getPokemon(anteriorID);
+    document.querySelector("#busqueda-id").value = anteriorID;
+});
