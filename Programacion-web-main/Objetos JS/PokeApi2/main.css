@@ -1,0 +1,90 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+  }
+  
+  /* Estilos del artículo del Pokémon */
+  .pokemon-card {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  /* Estilos de la imagen del Pokémon */
+  .imagen-pokemon {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos del nombre del Pokémon */
+  .nombre-pokemon {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos del título del documento */
+  .title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 32px;
+    color: #333;
+  }
+
+  .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  .btn:active {
+    background-color: #3e8e41;
+  }
+
+  .btn2 {
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .btn2:hover {
+    background-color: #ddd;
+  }
+  
+  .btn2:active {
+    background-color: #aaa;
+  }
+
+  .form {
+    background-color: #f2f2f2;
+    font-size: 16px;
+    margin: 20px; 
+    padding: 0; 
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
