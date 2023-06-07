@@ -9,7 +9,7 @@ body {
   /* Estilos del artículo del Pokémon */
   .pokemon-card {
     width: 300px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #f2f2f2;
     border-radius: 10px;
@@ -69,6 +69,11 @@ body {
     padding: 8px 16px;
     font-size: 14px;
     cursor: pointer;
+    margin: 10px;
+  }
+
+  .btn3 {
+    background-color: #e6ae16c9;
   }
   
   .btn2:hover {
@@ -91,4 +96,26 @@ body {
 
 div {
     text-align: center;
+    margin-top: 20px;
 }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #b81fd6;
+}
+
+li::before {
+  content: "•";
+  color: #ff0000;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+

@@ -1,5 +1,5 @@
 //Linea de importación
-import { respuestaPokemon } from "./ejemplos-datos/pokemon.js";
+import { respuestaPokemon } from "../ejemplos-datos/pokemon.js";
 
 //Funcion listado de 10 pokemon
 function actualizarPokemon(pokemon) {
@@ -45,6 +45,17 @@ function limpiarPokemon() {
         card.remove();
     });
 }
+
+//Se carga al iniciar la pagina
+function init() {
+
+    let busqueda = location.search;
+    let parametros = new URLSearchParams(busqueda);
+    let url = parametros.get('url');
+
+    let idPokemon = parametros.get('id');
+    getPokemon(idPokemon);
+
 
 //Recargar petición
 let pokeRecarga = document.querySelector("#btn");
@@ -97,3 +108,21 @@ pokeAnterior.addEventListener("click", function (event) {
     getPokemon(anteriorID);
     document.querySelector("#busqueda-id").value = anteriorID;
 });
+
+let pokeLista = document.querySelector("#btn-listado");
+pokeLista.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    window.location.href = "pokedex.html";
+});
+
+let pokeJuego = document.querySelector("#btn-adivina");
+pokeJuego.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    window.location.href = "Adivina-el-pokemon/adivina-el-pokemon.html";
+});
+
+}
+
+init();
