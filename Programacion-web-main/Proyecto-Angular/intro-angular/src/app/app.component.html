@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+<h2>Contador:{{ contador }}</h2>
+<button (click)="disminuirContador()">Disminuir</button>
+<button (click)="aumentarContador()">Aumentar</button>
+<p *ngIf="contador>0">El contador es positivo</p>
+<p *ngIf="contador==0">El contador es neutro</p>
+<p *ngIf="contador<0">El contador es negativo</p>
