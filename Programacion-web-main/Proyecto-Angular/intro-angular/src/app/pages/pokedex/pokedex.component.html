@@ -1,0 +1,9 @@
+<h2>Pokemon ({{totalPokemons}})</h2>
+<ul id="contenedor-pokemons">
+    <li *ngFor="let pokemon of pokemons">
+        <a [routerLink]="'/pokemon/'+getIDFromURL(pokemon.url)">{{ pokemon.name }}</a>
+    </li>
+</ul>
+
+<button [disabled]="!previous" (click)="paginaAnterior()" class="btn-anterior" id="anterior">Anterior</button>
+<button [disabled]="!next" (click)="paginaSiguiente()" class="btn-siguiente" id="siguiente">Siguiente</button>

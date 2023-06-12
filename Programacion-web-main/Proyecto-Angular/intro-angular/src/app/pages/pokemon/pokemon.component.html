@@ -1,0 +1,13 @@
+<div *ngIf="pokemon">
+    <img [src]="pokemon.sprites.front_default" alt="Imagen pokemon">
+    <img [src]="pokemon.sprites.front_shiny" alt="Imagen pokemon">
+
+    <h2>Nombre: {{ pokemon.name }}</h2>
+    <h2>ID: {{ pokemon.id }}</h2>
+    <p>
+        <span *ngFor="let tipo of pokemon.types"> {{ tipo.type.name }} </span>
+    </p>
+    <button (click)="anteriorPokemon()" class="btn2" id="btn-anterior">Anterior</button>
+    <button (click)="getRandomPokemon()" class="btn2" id="btn-siguiente">Random</button>
+    <button (click)="siguientePokemon()" class="btn2" id="btn-siguiente">Siguiente</button>
+</div>

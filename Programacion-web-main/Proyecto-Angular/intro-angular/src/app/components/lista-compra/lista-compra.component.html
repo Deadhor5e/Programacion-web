@@ -1,0 +1,6 @@
+<input placeholder="Nuevo Producto" type="text" [(ngModel)]="nuevoProducto">
+<button [disabled]="!nuevoProducto" (click)="incluirProducto()">Añadir</button>
+<button (click) = "vaciarLista()">Borrar</button>
+<ul>
+    <li *ngFor="let producto of productos">{{producto}}</li>
+</ul>

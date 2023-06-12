@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-contador',
+  templateUrl: './contador.component.html',
+  styleUrls: ['./contador.component.css']
 })
-export class AppComponent {
-  title: string = 'introAngular';
+export class ContadorComponent {
 
   contador: number = 0;
 
@@ -20,6 +19,8 @@ export class AppComponent {
   reinicarContador() {
     this.contador = 0;
   }
-
-
 }
+
+
+
+

@@ -3,16 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComponentsComponent } from './components/components.component';
+import { ContadorComponent } from './components/contador/contador.component';
+import { ListaCompraComponent } from './components/lista-compra/lista-compra.component';
+import { FormsModule } from '@angular/forms';
+import { MiListaComponent } from './pages/mi-lista/mi-lista.component';
+import { MiContadorComponent } from './pages/mi-contador/mi-contador.component';
+import { PokedexComponent } from './pages/pokedex/pokedex.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PokemonComponent } from './pages/pokemon/pokemon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentsComponent
+    ContadorComponent,
+    ListaCompraComponent,
+    MiListaComponent,
+    MiContadorComponent,
+    PokedexComponent,
+    PokemonComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
