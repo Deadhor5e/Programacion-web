@@ -1,0 +1,36 @@
+.contenedor {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  img {
+    max-width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    margin-bottom: 5px;
+  }
+  
+  p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .btn2 {
+    margin-right: 10px;
+  }
+  
+  #btn-anterior {
+    background-color: #ff0000;
+    color: #fff;
+  }
+  
+  #btn-siguiente {
+    background-color: #00ff00;
+    color: #fff;
+  }
+
+  div {
+    background-color: grey;
+  }

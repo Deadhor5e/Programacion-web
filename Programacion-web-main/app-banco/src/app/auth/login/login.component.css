@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Serif';
+}
+
+.container {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 10%;
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5%;
+    background-color: grey;
+}
+
+.title-page {
+    color: rgba(177, 33, 33, 0.767);
+}
+
+.user {
+    display: flex;
+    justify-content: left;
+    margin: 10px;
+}
+
+.pass {
+    display: flex;
+    justify-content: left;
+    margin: 10px;
+}
+
+.credential-buttons {
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: #4CAF50;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn:active {
+    background-color: #3e8e41;
+}
