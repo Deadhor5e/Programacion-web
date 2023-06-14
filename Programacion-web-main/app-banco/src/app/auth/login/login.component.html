@@ -1,10 +1,10 @@
 <div class="container">
     <h2 class="title-page">Login screen</h2>
-    <form class="form-login">
+    <section class="form-login">
         <div class="credentials">
-            <div class="user">
-                <label for="username">Usuario: </label>
-                <input id="username" type="text" placeholder="Nombre de usuario" />
+            <div class="email">
+                <label for="email">Email: </label>
+                <input [(ngModel)]="email" id="email" type="email" placeholder="Email" />
             </div>
             <div class="pass">
                 <label for="password">Contraseña: </label>
@@ -12,8 +12,8 @@
             </div>
         </div>
         <div class="credential-buttons">
-            <button type="submit" class="btn"><a routerLink="../../pages/dashboard">Iniciar Sesión</a></button>
+            <button (click)="validarLogin()" type="submit" class="btn"><a routerLink="/pages/dashboard">Iniciar Sesión</a></button>
             <button type="reset" class="btn">Reset</button>
         </div>
-    </form>
+    </section>
 </div>

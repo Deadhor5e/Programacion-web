@@ -3,6 +3,11 @@
     font-family: 'Noto Serif';
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .container {
     width: 40%;
     margin: 0 auto;
@@ -10,7 +15,7 @@
     color: black;
     text-align: center;
     border: 2px solid black;
-    border-radius: 5%;
+    border-radius: 10%;
     background-color: grey;
 }
 
@@ -18,7 +23,7 @@
     color: rgba(177, 33, 33, 0.767);
 }
 
-.user {
+.email {
     display: flex;
     justify-content: left;
     margin: 10px;
@@ -46,7 +51,7 @@
     border-radius: 5px;
     border: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: #4caf4fd2;
     cursor: pointer;
     margin: 5px;
 }
