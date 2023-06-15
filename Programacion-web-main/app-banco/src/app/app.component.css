@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+    font-size: small;
+}
+
+ul {
+    margin: 5px;
+    padding: 0;
+}
+.quick-menu {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    color: black;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.733);
+    background-color: rgba(216, 111, 50, 0.801);
+    list-style: none;
+    text-decoration: none;
+}
+
+.li-quick-menu {
+    display: inline-block;
+    list-style: none;
+    gap: 20px;
+    padding-top: 0;
+    padding-inline: 20px;
+    color: white;
+    text-decoration: none;
+}
+.li-quick-menu a {
+    text-decoration: none;
+    color: inherit; 
+}
+img{
+    width: 20% ;
+    
+}
+.imagen-logo{
+    text-align: center;
+}
+.nombre-banco{
+    text-align: center;
+}

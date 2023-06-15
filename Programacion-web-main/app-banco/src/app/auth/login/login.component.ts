@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ClienteService } from 'src/app/services/cliente/cliente.service';
 
 @Component({
@@ -11,16 +12,20 @@ export class LoginComponent {
   email: string = "";
   password: string = "";
 
-  constructor(private clienteService: ClienteService) { }
+constructor(private clienteService: ClienteService, private router: Router){}
 
-  validarLogin() {
-    console.log("OK");
-    const usuario = this.clienteService.toLogin(this.email, this.password);
-    if (usuario) {
+  validarlogin() {
+    console.log('validar', this.email, this.password);
+
+    const usuario = this.clienteService.tologin(this.email, this.password);
+    if (usuario){
       console.log(usuario);
-    } else {
-      console.error('Usuario no es correto');
-      
+      this.router.navigateByUrl('/pages/dashboard');
+    } 
+    else{
+      console.log("Usuário inexistente");
     }
   }
+
 }
+
