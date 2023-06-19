@@ -1,0 +1,19 @@
+
+public class Persona {
+
+	// Atributos o Propiedad de clase
+	private int edad;
+	private String nombre;
+
+	// Método constructor
+	public Persona() {
+		this.edad = 0;
+		this.nombre = "Sin nombre";
+	}
+	
+	// Método consultor
+	public int getEdad() {
+		return this.edad;
+	}
+
+}

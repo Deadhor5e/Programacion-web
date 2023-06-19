@@ -1,0 +1,13 @@
+
+public class Persona {
+
+	private int edad;
+	private String nombre;
+
+	public Persona() {
+		this.edad = 0;
+		this.nombre = "Sin nombre";
+		
+	}
+
+}
