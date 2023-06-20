@@ -1,0 +1,18 @@
+package circulos;
+
+//Atributo radio
+//Constructor para inicializar el radio
+//Getters y Setters
+//CalcularArea()
+
+public class Circulos {
+	
+	private double radio;
+	
+	public Circulos() {}
+
+	public Circulos(double radio) {
+		
+	}
+
+}

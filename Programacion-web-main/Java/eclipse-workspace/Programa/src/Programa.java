@@ -107,5 +107,17 @@ public class Programa {
 		Rectangulo rectangulo3 = new Rectangulo(3,1);
 		
 		rectangulo3.dibujarRectangulo();
-	}
+		
+		r1.setAltura(5);
+		r1.setBase(10);
+		
+		r2.setAltura(10);
+		r2.setBase(20);
+		
+		if (r1.equals(r2)) {
+			System.out.println("Son iguales");
+		} else {
+			System.out.println("Son distintos");
+			}
+		}
 }

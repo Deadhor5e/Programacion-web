@@ -52,4 +52,19 @@ public class Rectangulo {
 		System.out.println();
 		}
 	}
+
+	// Convertir objetos de esta clase a si representación en texto
+	// es un metodo que ya existe, lo sobreescribimos
+	public String toString() {
+		String textoRectangulo = "Base: " + this.base + " Altura: " + this.altura;
+		return textoRectangulo;
+	}
+	
+	public boolean equals(Object o) {
+		// Convertir "o" a  tipo Rectangulo
+		Rectangulo rectangulo = (Rectangulo) o;
+		boolean mismaAltura = this.altura == rectangulo.altura;
+		boolean mismaBase = this.base == rectangulo.base;
+		return mismaAltura && mismaBase;
+	}
 }

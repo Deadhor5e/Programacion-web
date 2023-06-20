@@ -1,0 +1,17 @@
+package multiplicar;
+
+public class multiplicar {
+	
+	private int tabla1;
+	private int tabla2;
+	private int tabla3;
+	private int tabla4;
+	private int tabla5;
+
+	public multiplicar() {}
+	
+	public multiplicar(int tabla) {
+		this.tabla = tabla;
+	}
+
+}

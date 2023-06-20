@@ -1,0 +1,17 @@
+package multiplicar;
+
+public class multiplicar {
+
+	private int numero, resultado;
+
+	public multiplicar() {
+	}
+
+	public multiplicar(int numero) {
+		this.numero = numero;
+		for (int i = 0; i <= 9; i++) {
+		resultado = this.numero * i;
+		}
+	}
+
+}

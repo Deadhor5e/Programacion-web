@@ -1,0 +1,27 @@
+package libros;
+
+//Clase con atributos
+//titulo
+//autor
+//publicacion
+//
+//Contructor que inicialicen los atributos
+//metodo consultor y modificadores
+//metodo obtenerInformación() que muestre toda la info del libro
+//sobreescribir el metodo "equals" para poder comparar libros
+//en la clase Main (Programa) probar los metodos con objetos Libro
+
+public class Libros {
+	
+	private String titulo;
+	private String autor;
+	private  int publicacion;
+
+	public Libros(){}
+	
+	public Libros(String titulo, String autor, int publicacion) {
+		String titulo = this.titulo;
+		String autor = this.autor;
+		int publicacion = this.publicacion;
+	}
+}

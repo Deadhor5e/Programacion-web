@@ -1,0 +1,16 @@
+package libros;
+
+public class Main {
+
+	public Main() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		
+		Libros libro1 = new Libros( "El arte de la guerra", "Sun-Tzu",1080);
+		
+		System.out.println(libro1);
+	}
+
+}

@@ -1,0 +1,15 @@
+package multiplicar;
+
+public class multiplicar {
+	
+	private int numero;
+
+	public multiplicar() {}
+	
+	public multiplicar(int numero) {
+		this.numero = numero;
+	}
+	
+	
+
+}

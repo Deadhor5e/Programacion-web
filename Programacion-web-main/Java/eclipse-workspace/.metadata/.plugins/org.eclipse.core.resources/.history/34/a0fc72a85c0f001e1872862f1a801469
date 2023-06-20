@@ -1,0 +1,13 @@
+package multiplicar;
+
+public class multiplicar {
+	
+	private int tabla;
+
+	public multiplicar() {}
+	
+	public multiplicar(int tabla) {
+		this.tabla = tabla;
+	}
+
+}
