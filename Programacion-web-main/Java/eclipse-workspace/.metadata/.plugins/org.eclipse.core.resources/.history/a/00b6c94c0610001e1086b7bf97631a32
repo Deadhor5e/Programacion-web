@@ -1,0 +1,18 @@
+package banco;
+
+import java.util.Scanner;
+
+public class CajeroAutomatico {
+
+	public CajeroAutomatico() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		
+		CuentaBancaria cuenta = new CuentaBancaria();
+		System.out.println("Introduce Nº de cuenta: ");
+
+	}
+
+}

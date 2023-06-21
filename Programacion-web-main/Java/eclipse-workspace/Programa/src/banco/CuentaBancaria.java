@@ -37,6 +37,10 @@ public class CuentaBancaria {
 		this.saldo += dinero;
 	}
 	
+	public void retirarDinero(double dinero) {
+		this.saldo -= dinero;
+	}
+	
 	public String toString() {
 		String textoCuenta = "Nº Cuenta: " + this.numeroCuenta + ", Saldo actual: " + this.saldo + ".";
 		return textoCuenta;
