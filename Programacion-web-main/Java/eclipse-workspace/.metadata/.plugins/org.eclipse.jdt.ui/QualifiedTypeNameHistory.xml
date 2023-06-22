@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="libros.Libros"/>
+    <fullyQualifiedTypeName name="utilidades.Buscador"/>
+    <fullyQualifiedTypeName name="app_banco.modelos.Gestor"/>
+    <fullyQualifiedTypeName name="app_banco.modelos.Cliente"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+</qualifiedTypeNameHistroy>
