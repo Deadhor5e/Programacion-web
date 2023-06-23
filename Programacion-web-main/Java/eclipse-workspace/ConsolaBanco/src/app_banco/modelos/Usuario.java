@@ -1,16 +1,16 @@
 package app_banco.modelos;
 
-public class Gestor {
+public class Usuario {
 
-	private Integer id;
-	private String usuario;
-	private String password;
-	private String correo;
+	protected Integer id;
+	protected String usuario;
+	protected String password;
+	protected String correo;
 
-	public Gestor() {
+	public Usuario() {
 	}
 
-	public Gestor(Integer id, String usuario, String password, String correo) {
+	public Usuario(Integer id, String usuario, String password, String correo) {
 
 		this.id = id;
 		this.usuario = usuario;
@@ -50,16 +50,17 @@ public class Gestor {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
-	
-	//toString
+
+	// toString
 	public String toString() {
-		String textoGestor = "\nID: " + this.id + "\nUsuario: " + this.usuario + "\nContraseña: " + this.password + "\nCorreo: " + this.correo + "\n";
+		String textoGestor = "ID: " + this.id + "\nUsuario: " + this.usuario + "\nContraseña: " + this.password
+				+ "\nCorreo: " + this.correo + "\n";
 		return textoGestor;
 	}
-	
-	//equals
+
+	// equals
 	public boolean equals(Object o) {
-		Gestor g = (Gestor) o;
-		return this.id == g.id;
+		Usuario u = (Usuario) o;
+		return this.id == u.id;
 	}
 }

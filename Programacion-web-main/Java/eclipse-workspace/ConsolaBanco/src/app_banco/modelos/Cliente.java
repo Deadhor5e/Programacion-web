@@ -1,6 +1,7 @@
 package app_banco.modelos;
 
-public class Cliente {
+					//Cliente:hijo > Usuario:padre
+public class Cliente extends Usuario{
 	
 	private Integer id;
 	private String usuario;
@@ -9,10 +10,14 @@ public class Cliente {
 	private Integer gestorId;
 	private double saldo;
 
-	public Cliente() {}
+	public Cliente() {
+		super();
+	}
 	
 	public Cliente(Integer id, String usuario, String password, String correo, Integer gestorId, double saldo) {
-
+		
+		super(id, usuario, password, correo);
+		
 		this.id = id;
 		this.usuario = usuario;
 		this.password = password;
