@@ -55,6 +55,4 @@ public class Utiles {
 		return correoAleatorio(NOMBRES, APELLIDOS, CORREOS2);
 	}
 
-	
-
 }

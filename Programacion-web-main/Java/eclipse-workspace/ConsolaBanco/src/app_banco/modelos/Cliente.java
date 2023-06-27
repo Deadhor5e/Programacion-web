@@ -76,7 +76,7 @@ public class Cliente extends Usuario{
 	
 	//toString
 	public String toString() {
-		String textoCliente = "ID: " + this.id + "\nUsuario: " + this.usuario + "\nContraseña: " + this.password + "\nCorreo: " + this.correo + "\nID Gestor: " + this.gestorId + "\nSaldo: " + this.saldo + "€";
+		String textoCliente = "\nID: " + this.id + "\nUsuario: " + this.usuario + "\nContraseña: " + this.password + "\nCorreo: " + this.correo + "\nID Gestor: " + this.gestorId + "\nSaldo: " + this.saldo + "€\n";
 		return textoCliente;
 	}
 	

@@ -74,7 +74,7 @@ public class Transferencia {
 	
 	//toString
 	public String toString() {
-		String textoTransferencia = "ID: " + this.id + "\nID Ordenante: " + this.idOrdenante + "\nID Beneficiario: " + this.idBenecifiario + "\nImporte: " + this.importe + "€" + "\nConcepto: " + this.concepto + "\nFecha: " + this.fecha;
+		String textoTransferencia = "\nID: " + this.id + "\nID Ordenante: " + this.idOrdenante + "\nID Beneficiario: " + this.idBenecifiario + "\nImporte: " + this.importe + "€" + "\nConcepto: " + this.concepto + "\nFecha: " + this.fecha+ "\n";
 		return textoTransferencia;
 	}
 	

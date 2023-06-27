@@ -1,9 +1,0 @@
-package libros;
-
-public class Libros {
-
-	public Libros() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
