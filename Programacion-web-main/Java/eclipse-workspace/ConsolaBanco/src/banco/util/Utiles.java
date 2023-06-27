@@ -11,6 +11,7 @@ public class Utiles {
 
 	public static final String[] NOMBRES = { "Juan", "Antonio", "Paco", "Irene" };
 	public static final String[] APELLIDOS = { "Perez", "Martin", "Lopez", "Gomez", "Uta", "Lama" };
+	public static final String[] PASS = { "Perez123", "Martin123", "Lopez123", "Gomez123", "Uta123", "Lama123" };
 	public static final String[] CORREOS2 = { "@hotmail.com", "@gmail.com", "@yahoo.com", "@hotmail.es", "@gmail.es",
 			"@yahoo.es" };
 
@@ -33,6 +34,7 @@ public class Utiles {
 	public static String nombreAleatorio() {
 		return nombreAleatorio(NOMBRES, APELLIDOS);
 	}
+
 
 	// Correo aleatorio
 	public static String correoAleatorio(String[] nombres, String[] apellidos, String[] correos2) {

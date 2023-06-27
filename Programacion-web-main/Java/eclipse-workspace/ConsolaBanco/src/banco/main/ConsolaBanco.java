@@ -11,9 +11,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ConsolaBanco {
+	
+	private static Scanner teclado;
+	static List<Gestor> gestores = new ArrayList<>();
 
 	public ConsolaBanco() {
-	}
+	}	
 
 	public static void main(String[] args) {
 
@@ -26,8 +29,8 @@ public class ConsolaBanco {
 		Integer siguienteIdTransferencia = 1;
 		Integer siguienteIdMensaje = 1;
 
-		Scanner teclado = new Scanner(System.in);
-		
+		teclado = new Scanner(System.in);
+
 		int opcionMain = -1;
 		int opcionGestores = -1;
 		int opcionClientes = -1;
@@ -41,6 +44,7 @@ public class ConsolaBanco {
 			System.out.println("2. Clientes.");
 			System.out.println("3. Transferencias.");
 			System.out.println("4. Mensajes.");
+			System.out.println("18. Login.");
 			System.out.println("0. Salir.");
 			System.out.println("-----------------------");
 			opcionMain = teclado.nextInt();
@@ -83,8 +87,8 @@ public class ConsolaBanco {
 					for (int i = 0; i < 10; i++) {
 						String nombreGestores = Utiles.nombreAleatorio();
 						String correoGestores = Utiles.correoAleatorio();
-						String passwordGetores = Utiles.nombreAleatorio();
-						Gestor gestor = new Gestor(siguienteIdGestor, nombreGestores, passwordGetores, correoGestores);
+						String passwordGestores = Utiles.nombreAleatorio();
+						Gestor gestor = new Gestor(siguienteIdGestor, nombreGestores, passwordGestores, correoGestores);
 						gestores.add(gestor);
 						siguienteIdGestor++;
 					}
@@ -211,7 +215,8 @@ public class ConsolaBanco {
 					String correoCliente = teclado.next();
 					System.out.println("Saldo: ");
 					Integer saldoCliente = teclado.nextInt();
-					Cliente nuevoCliente = new Cliente(siguienteIdCliente, nombreCliente, passwordCliente, correoCliente, siguienteIdGestor, saldoCliente);
+					Cliente nuevoCliente = new Cliente(siguienteIdCliente, nombreCliente, passwordCliente,
+							correoCliente, siguienteIdGestor, saldoCliente);
 					clientes.add(nuevoCliente);
 					siguienteIdCliente++;
 					siguienteIdGestor++;
@@ -230,7 +235,8 @@ public class ConsolaBanco {
 						String passwordClientes = Utiles.nombreAleatorio();
 						String correoClientes = Utiles.correoAleatorio();
 						double saldoClientes = Math.random() * 10000;
-						Cliente cliente = new Cliente(siguienteIdCliente, nombreClientes, passwordClientes, correoClientes, siguienteIdGestor, saldoClientes);
+						Cliente cliente = new Cliente(siguienteIdCliente, nombreClientes, passwordClientes,
+								correoClientes, siguienteIdGestor, saldoClientes);
 						clientes.add(cliente);
 						siguienteIdCliente++;
 						siguienteIdGestor++;
@@ -356,7 +362,8 @@ public class ConsolaBanco {
 					double importeTransferencia = teclado.nextDouble();
 					System.out.println("Concepto: ");
 					String conceptoTransferencia = teclado.next();
-					Transferencia nuevaTransferencia = new Transferencia(siguienteIdTransferencia, siguienteIdCliente, siguienteIdCliente, importeTransferencia, conceptoTransferencia);
+					Transferencia nuevaTransferencia = new Transferencia(siguienteIdTransferencia, siguienteIdCliente,
+							siguienteIdCliente, importeTransferencia, conceptoTransferencia);
 					transferencias.add(nuevaTransferencia);
 					siguienteIdTransferencia++;
 					siguienteIdCliente++;
@@ -374,11 +381,12 @@ public class ConsolaBanco {
 					Integer contadorConcepto = 1;
 					Integer contadorImporte = 1;
 					for (int i = 0; i < 5; i++) {
-						conceptoTransferencia = "TEST" + contadorConcepto;						
+						conceptoTransferencia = "TEST" + contadorConcepto;
 						importeTransferencia = 1000.00 + contadorImporte;
 						contadorConcepto++;
 						contadorImporte++;
-						Transferencia nuevaTransferencia2 = new Transferencia(siguienteIdTransferencia, siguienteIdCliente, siguienteIdCliente, importeTransferencia, conceptoTransferencia);
+						Transferencia nuevaTransferencia2 = new Transferencia(siguienteIdTransferencia,
+								siguienteIdCliente, siguienteIdCliente, importeTransferencia, conceptoTransferencia);
 						transferencias.add(nuevaTransferencia2);
 						siguienteIdTransferencia++;
 						siguienteIdCliente++;
@@ -413,10 +421,7 @@ public class ConsolaBanco {
 					System.out.println("Opción no válida");
 				}
 				break;
-//			case 0:
-//				System.out.println("Hasta la próxima!\n");
-//				break;
-				
+
 			case 4: // Menu Mensajes
 				System.out.println("-----------------------");
 				System.out.println("Menú mensajes: \n");
@@ -434,7 +439,8 @@ public class ConsolaBanco {
 					String textoMensaje = teclado.next();
 					System.out.println("Concepto: ");
 					Integer idDestinatario = teclado.nextInt();
-					Mensaje nuevoMensaje = new Mensaje(siguienteIdMensaje, siguienteIdCliente, idDestinatario, textoMensaje, null);
+					Mensaje nuevoMensaje = new Mensaje(siguienteIdMensaje, siguienteIdCliente, idDestinatario,
+							textoMensaje, null);
 					mensajes.add(nuevoMensaje);
 					siguienteIdMensaje++;
 					siguienteIdCliente++;
@@ -450,9 +456,10 @@ public class ConsolaBanco {
 
 					Integer contadorMensaje = 1;
 					for (int i = 0; i < 5; i++) {
-						textoMensaje = "TEST-" + contadorMensaje;						
+						textoMensaje = "TEST-" + contadorMensaje;
 						contadorMensaje++;
-						Mensaje nuevoMensaje2 = new Mensaje(siguienteIdMensaje, siguienteIdCliente, siguienteIdCliente, textoMensaje, null);
+						Mensaje nuevoMensaje2 = new Mensaje(siguienteIdMensaje, siguienteIdCliente, siguienteIdCliente,
+								textoMensaje, null);
 						mensajes.add(nuevoMensaje2);
 						siguienteIdMensaje++;
 						siguienteIdCliente++;
@@ -487,6 +494,11 @@ public class ConsolaBanco {
 					System.out.println("Opción no válida");
 				}
 				break;
+				
+			case 18:
+				login();
+				break;
+				
 			case 0:
 				System.out.println("Hasta la próxima!\n");
 				break;
@@ -497,24 +509,37 @@ public class ConsolaBanco {
 			}
 		} while (opcionMain != 0);
 		teclado.close();
+		
 	}
 	
-//	private void login() {
-//	System.out.print("ID Getor: ");
-//	int idGetor = teclado.nextInt();
-//	System.out.print("Contraseña: ");
-//	String password = teclado.next();
-//	Gestor gestor = buscarGetorPorId(idGestor);
-//	
-//	if (gestor!=null) {
-//		if(gestor.getPassword().equals(password)) {
-//			System.out.print("Login correcto!");
-//		} else {
-//			System.out.print("Login incorrecto!");
-//		}
-//	} else {
-//		System.out.print("El usuario no existe...");
-//	}
-//}
+	private static void login() {
+		System.out.print("ID Getor: ");
+		int idGestor = teclado.nextInt();
+		System.out.print("Contraseña: ");
+		String password = teclado.next();
+		Gestor gestor = buscarGestorPorId(idGestor);
 
+		if (gestor != null) {
+			if (gestor.getPassword().equals(password)) {
+				System.out.print("Login correcto!");
+			} else {
+				System.out.print("Login incorrecto!");
+			}
+		} else {
+			System.out.print("El usuario no existe...\n");
+		}
+	}
+	
+	private static Gestor buscarGestorPorId(int id) {
+		Gestor gestorResultado = null;
+		for (int i = 0; i < gestores.size(); i++) {
+			Gestor gestor = gestores.get(i);
+			if (gestor.getId() == id) {
+				gestorResultado = gestor;
+				return gestorResultado;
+			}
+		}
+		return null;
+	}
+	
 }
