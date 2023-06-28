@@ -1,9 +1,0 @@
-package banco;
-
-public class CajeroAutomatico {
-
-	public CajeroAutomatico() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

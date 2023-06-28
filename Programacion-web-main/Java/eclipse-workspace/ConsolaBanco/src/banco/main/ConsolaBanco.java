@@ -9,14 +9,16 @@ import banco.util.Utiles;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class ConsolaBanco {
-	
+
 	private static Scanner teclado;
 	static List<Gestor> gestores = new ArrayList<>();
 
 	public ConsolaBanco() {
-	}	
+	}
 
 	public static void main(String[] args) {
 
@@ -87,7 +89,7 @@ public class ConsolaBanco {
 					for (int i = 0; i < 10; i++) {
 						String nombreGestores = Utiles.nombreAleatorio();
 						String correoGestores = Utiles.correoAleatorio();
-						String passwordGestores = Utiles.nombreAleatorio();
+						String passwordGestores = "123";
 						Gestor gestor = new Gestor(siguienteIdGestor, nombreGestores, passwordGestores, correoGestores);
 						gestores.add(gestor);
 						siguienteIdGestor++;
@@ -436,11 +438,15 @@ public class ConsolaBanco {
 				switch (opcionMensajes) {
 				case 1: // Crear mensaje
 					System.out.println("Texto: ");
-					String textoMensaje = teclado.next();
-					System.out.println("Concepto: ");
+					String textoMensaje = teclado.nextLine();
+					textoMensaje = teclado.nextLine();
+					System.out.println("ID destinatario: ");
+					Date fechaActual = new Date();
+					SimpleDateFormat formatoFecha = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+					String fechaFormateada = formatoFecha.format(fechaActual);
 					Integer idDestinatario = teclado.nextInt();
 					Mensaje nuevoMensaje = new Mensaje(siguienteIdMensaje, siguienteIdCliente, idDestinatario,
-							textoMensaje, null);
+							textoMensaje, fechaFormateada);
 					mensajes.add(nuevoMensaje);
 					siguienteIdMensaje++;
 					siguienteIdCliente++;
@@ -449,21 +455,25 @@ public class ConsolaBanco {
 					System.out.println("-----------------------");
 					System.out.println(nuevoMensaje);
 					break;
-				case 2: // Insetar multiples mensajes
+				case 2: // Insertar múltiples mensajes
 					System.out.println("-----------------------");
 					System.out.println("Creando 5 nuevas transferencias");
 					System.out.println("-----------------------");
 
 					Integer contadorMensaje = 1;
 					for (int i = 0; i < 5; i++) {
+						Date fechaActual1 = new Date();
+						SimpleDateFormat formatoFecha2 = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+						String fechaFormateada2 = formatoFecha2.format(fechaActual1);
+
 						textoMensaje = "TEST-" + contadorMensaje;
 						contadorMensaje++;
+
 						Mensaje nuevoMensaje2 = new Mensaje(siguienteIdMensaje, siguienteIdCliente, siguienteIdCliente,
-								textoMensaje, null);
+								textoMensaje, fechaFormateada2);
 						mensajes.add(nuevoMensaje2);
 						siguienteIdMensaje++;
 						siguienteIdCliente++;
-
 					}
 					break;
 				case 3: // Obtener una única Transferencia
@@ -494,11 +504,33 @@ public class ConsolaBanco {
 					System.out.println("Opción no válida");
 				}
 				break;
-				
-			case 18:
-				login();
+
+			case 18: // Login
+				System.out.println("Nombre de usuario: ");
+				String nombreUsuario = teclado.nextLine();
+				nombreUsuario = teclado.nextLine();
+				System.out.println("Contraseña: ");
+				Integer contrasena = teclado.nextInt();
+
+				boolean loginExitoso = false;
+				Gestor gestorLogueado = null;
+
+				for (Gestor gestor : gestores) {
+					if (gestor.getUsuario().equals(nombreUsuario)
+							&& gestor.getPassword().equals(contrasena.toString())) {
+						loginExitoso = true;
+						gestorLogueado = gestor;
+						break;
+					}
+				}
+
+				if (loginExitoso) {
+					System.out.println("Inicio de sesión exitoso. ¡Bienvenido, " + gestorLogueado.getUsuario() + "!");
+				} else {
+					System.out.println("Nombre de usuario o contraseña incorrectos. Vuelve a intentarlo.");
+				}
 				break;
-				
+
 			case 0:
 				System.out.println("Hasta la próxima!\n");
 				break;
@@ -509,37 +541,7 @@ public class ConsolaBanco {
 			}
 		} while (opcionMain != 0);
 		teclado.close();
-		
-	}
-	
-	private static void login() {
-		System.out.print("ID Getor: ");
-		int idGestor = teclado.nextInt();
-		System.out.print("Contraseña: ");
-		String password = teclado.next();
-		Gestor gestor = buscarGestorPorId(idGestor);
 
-		if (gestor != null) {
-			if (gestor.getPassword().equals(password)) {
-				System.out.print("Login correcto!");
-			} else {
-				System.out.print("Login incorrecto!");
-			}
-		} else {
-			System.out.print("El usuario no existe...\n");
-		}
 	}
-	
-	private static Gestor buscarGestorPorId(int id) {
-		Gestor gestorResultado = null;
-		for (int i = 0; i < gestores.size(); i++) {
-			Gestor gestor = gestores.get(i);
-			if (gestor.getId() == id) {
-				gestorResultado = gestor;
-				return gestorResultado;
-			}
-		}
-		return null;
-	}
-	
+
 }

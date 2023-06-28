@@ -8,11 +8,11 @@ public class Mensaje {
 	private Integer idOrigen;
 	private Integer idDestino;
 	private String texto;
-	private Date fecha;
+	private String fecha;
 
 	public Mensaje() {}
 	
-	public Mensaje(Integer id, Integer idOrigen, Integer idDestino, String texto, Date fecha) {
+	public Mensaje(Integer id, Integer idOrigen, Integer idDestino, String texto, String fecha) {
 		
 		this.id = id;
 		this.idOrigen = idOrigen;
@@ -56,11 +56,11 @@ public class Mensaje {
 		this.texto = texto;
 	}
 
-	public Date getFecha() {
+	public String getFecha() {
 		return fecha;
 	}
 
-	public void setFecha(Date fecha) {
+	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
 	

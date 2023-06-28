@@ -1,9 +1,0 @@
-package multiplicar;
-
-public class multiplicar {
-
-	public multiplicar() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
