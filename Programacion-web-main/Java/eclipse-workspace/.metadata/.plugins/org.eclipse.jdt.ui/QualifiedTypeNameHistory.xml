@@ -1,14 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="libros.Libros"/>
-    <fullyQualifiedTypeName name="utilidades.Buscador"/>
-    <fullyQualifiedTypeName name="app_banco.modelos.Cliente"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="banco.util.Utiles"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="app_banco.modelos.Gestor"/>
-    <fullyQualifiedTypeName name="app_banco.modelos.Mensaje"/>
-    <fullyQualifiedTypeName name="javax.management.loading.PrivateClassLoader"/>
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>
