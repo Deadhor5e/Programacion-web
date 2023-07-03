@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.banco.bancobackend.model.Gestor;
@@ -27,7 +28,23 @@ public class GestorService {
 
 	// Guardar (crear o actualizar) un gestor y lo devuelve con ID
 	public Gestor guardarGestor(Gestor gestor) {
-		return this.gestorRepository.save(gestor);
+	    String pass = gestor.getPassword();
+	    if (pass != null) {
+	        // Inicializar encriptado
+	        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+	        
+	        // Encriptar la contraseña
+	        String encryptedPassword = encoder.encode(pass);
+	        
+	        // Asignar la contraseña encriptada al gestor
+	        gestor.setPassword(encryptedPassword);
+	    } else {
+	    	Gestor gestorExistente =  leerGestorPorId(gestor.getId()).orElse(null);
+	    	if (gestorExistente!=null) {
+	    		gestor.setPassword(gestorExistente.getPassword());
+	    	}
+	    }
+	    return this.gestorRepository.save(gestor);
 	}
 
 	// Borrar gestor por ID
@@ -42,6 +59,14 @@ public class GestorService {
 
 	// Leer gestor por correo y contraseña
 	public Optional<Gestor> buscarGestorPorCorreoYPass(String correo, String password) {
-		return this.gestorRepository.findFirstByCorreoAndPassword(correo, password);
+		Optional<Gestor> gestor = buscarGestorPorCorreo(correo);
+		if (gestor.isPresent()) {
+			Gestor gestorEncontrado = gestor.get();
+			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+			if (encoder.matches(password, gestorEncontrado.getPassword())) {
+				return gestor;
+			}
+		}
+		return null;
 	}
 }
