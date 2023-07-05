@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ClienteService } from 'src/app/services/cliente/cliente.service';
+
 
 @Component({
   selector: 'app-micuenta',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./micuenta.component.css']
 })
 export class MicuentaComponent {
+
+  cliente: any = null;
+
+  constructor(private clienteService: ClienteService){
+
+
+  }
+  
+  ngOnInit(): void {
+    this.cliente = this.clienteService.leerSesion();
+  }
 
 }

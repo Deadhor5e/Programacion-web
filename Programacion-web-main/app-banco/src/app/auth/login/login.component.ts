@@ -27,5 +27,10 @@ constructor(private clienteService: ClienteService, private router: Router){}
     }
   }
 
-}
+  enviarLogin() {
+    this.clienteService.login(this.email, this.password).subscribe(cliente=>{
+      console.log(cliente);
+    })
 
+  }
+}

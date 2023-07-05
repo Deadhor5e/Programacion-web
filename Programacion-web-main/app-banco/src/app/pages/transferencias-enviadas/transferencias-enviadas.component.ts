@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {transferenciasEnviadas} from 'src/app/datos/transferencias-ejemplos';
+import { TransferenciaService } from 'src/app/services/transferencia/transferencia.service';
 
 @Component({
   selector: 'app-transferencias-enviadas',
@@ -8,5 +8,20 @@ import {transferenciasEnviadas} from 'src/app/datos/transferencias-ejemplos';
 })
 export class TransferenciasEnviadasComponent {
 
-  transferencias: any= transferenciasEnviadas;
+  transferencias: any[] = [];
+
+  constructor(private TransferenciaService: TransferenciaService) { }
+
+  ngOnInit() {
+    this.cargarTransferencias();
+  }
+
+  cargarTransferencias() {
+    this.TransferenciaService
+    .obtenerTransferencias()
+    .subscribe((transferenciasCargadas: any) => {
+      console.log(transferenciasCargadas);
+      this.transferencias = transferenciasCargadas;
+    });
+  }
 }
