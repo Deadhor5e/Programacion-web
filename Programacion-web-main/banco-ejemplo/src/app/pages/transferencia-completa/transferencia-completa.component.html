@@ -1,0 +1,12 @@
+<p>Detalles</p>
+
+
+
+<article class="fila-tabla" *ngFor="let transferencia of transferencias">
+   <div *ngIf="transferencias === transferencia.concepto">
+    <div> {{transferencia.id}}</div>
+    <div> {{transferencia.concepto}}</div>
+    <div>{{transferencia.importe | currency:'EUR'}}</div>
+    <div>{{transferencia.fecha | date:"medium" }}</div>
+</div>
+</article>

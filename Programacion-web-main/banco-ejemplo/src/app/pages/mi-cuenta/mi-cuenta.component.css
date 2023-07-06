@@ -1,0 +1,93 @@
+div{
+    justify-content: space-around;
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {text-align: center;}
+
+.saldo{
+    border: 3px solid #ebebeb;
+    border-style: groove;
+    border-radius: 8%;
+    text-align: center;
+}
+
+p{
+    text-align:center;
+    margin: 60px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.dinero{
+  font-size: large;
+  color: rgb(179, 226, 179);
+}
+
+input {
+    margin: 15px;
+    color: black;
+}
+
+input:focus{
+    background-color: whitesmoke;
+}
+
+label {
+    margin: auto;
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 15px;
+}
+
+.submit {
+    margin: 10px;
+    background-color: var(--Button);
+    font-weight: bolder;
+    color: black;
+    font-size: large;
+    margin-left: 48px;
+}
+
+button{
+font-weight: bold;
+font-size: larger;
+border-radius: 8%;
+height: fit-content;
+margin-right: 50px;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 767px) {
+    div {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .saldo {
+      width: 80%;
+      margin-bottom: 20px;
+     
+    }
+  
+    p {
+      margin: 20px;
+      text-align: center;
+    }
+  
+    input {
+      margin: 10px;
+    }
+  
+    label {
+      margin-left: 10px;
+    }
+  
+    .submit {
+      margin-left: 10px;
+    }
+  }

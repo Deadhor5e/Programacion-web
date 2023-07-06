@@ -1,0 +1,17 @@
+<div *ngIf="!cliente">
+<section >
+    <h2>Iniciar Sesión</h2>
+    <label for="email">Correo electronico</label><br>
+    <input [(ngModel)]="email" type="email" id="email" placeholder="Correo electronico" (keyup.enter)="validarLogin()"><br>
+    <label for="password">Contraseña</label><br>
+    <input [(ngModel)]="password" type="password" id="password" placeholder="Contraseña"  (keyup.enter)="validarLogin()"><br>
+    <button (click)="enviarLogin()"  class="submit">Acceder</button> 
+</section>
+</div>
+
+<div *ngIf="cliente">
+<section >
+    <h2>Cerrar Sesión</h2>
+    <button (click)="cerrarSesion()" class="submit">Cerrar sesión</button>
+</section>
+</div>

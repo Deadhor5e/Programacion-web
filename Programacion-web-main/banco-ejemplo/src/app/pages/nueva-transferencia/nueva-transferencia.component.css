@@ -1,0 +1,23 @@
+section{
+    line-height: 40px;
+    text-align: center;
+    font-size: larger;
+}
+
+label{
+    font-weight: bold;
+}
+
+.submit {
+    margin: auto;
+    line-height: 30px;
+    background-color: rgb(230, 230, 230);
+    color: rgb(15, 15, 15);
+    font-weight: bolder;
+    font-size: large;
+}
+
+input:focus {
+    background-color: whitesmoke;
+    color: black;
+}

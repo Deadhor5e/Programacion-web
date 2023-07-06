@@ -1,0 +1,19 @@
+*{
+    --Fondo: rgb(19, 19, 20);
+    background-color: var(--Fondo);
+
+   --Font-color1: rgb(255, 255, 255);
+   color: whitesmoke;
+
+   --Button:rgb(240, 240, 240);
+
+   font-family: Ysabeau, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--Font-color);
+}
+
+body{
+    margin: 40px;
+}

@@ -1,0 +1,23 @@
+<p *ngIf="cliente">Usuario: {{ cliente.usuario }} </p>
+<section  *ngIf="cliente">
+<div>
+    <article class="carta-inicio" routerLink="/pages/transferencias-enviadas">
+        <app-transferencias-enviadas></app-transferencias-enviadas>
+    </article>
+    <br>
+    <article class="carta-inicio" routerLink="/pages/transferencias-recibidas">
+        <app-transferencias-recibidas></app-transferencias-recibidas>
+    </article>
+</div>
+
+<article>
+    <h2 routerLink="/pages/nueva-transferencia">Nueva Transferencia</h2>
+</article>
+</section>
+
+<div *ngIf="!cliente">
+    <p>
+        Inicie Sesión para consultar sus datos
+    </p>
+</div>
+

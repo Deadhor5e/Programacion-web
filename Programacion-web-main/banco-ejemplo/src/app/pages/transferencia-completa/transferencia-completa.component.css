@@ -1,0 +1,22 @@
+.fila-tabla{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 19px;
+}
+
+p {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.fila-tabla>div {
+    width: 20%;
+}
+
+.cabecera-tabla{
+    font-weight: bold;
+    font-size: 23px;
+    margin: 12px;
+}
