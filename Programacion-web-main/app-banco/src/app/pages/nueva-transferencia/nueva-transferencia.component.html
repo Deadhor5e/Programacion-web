@@ -1,1 +1,11 @@
-<p>nueva-transferencia works!</p>
+<section>
+    <label for="ordenante">Ordenante</label><br>
+    <input type="text" id="ordenante" [(ngModel)]="ordenante" placeholder="Ordenante"><br>
+    <label for="beneficiario">Beneficiario</label><br>
+    <input type="text" id="beneficiario" [(ngModel)]="beneficiario" placeholder="Beneficiario"><br>
+    <label for="importe">Importe</label><br>
+    <input type="number" id="importe" [(ngModel)]="importe" placeholder="Importe"><br>
+    <label for="concepto">Concepto</label><br>
+    <input type="text" id="concepto" [(ngModel)]="concepto" placeholder="Concepto"><br>
+    <button class="submit" (click)="enviarTransferencia()">Enviar</button>
+  </section>

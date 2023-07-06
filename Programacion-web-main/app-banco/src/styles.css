@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    --Fondo: rgb(64, 139, 168);
+    background-color: var(--Fondo);
+
+   --Font-color1: rgb(255, 255, 255);
+   color: rgba(199, 69, 29, 0.788);
+
+   --Button:rgb(240, 240, 240);
+
+   font-family: monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--Font-color);
+}
+
+body{
+    margin: 40px;
+}

@@ -1,0 +1,22 @@
+<section *ngIf="cliente">
+<article>
+    <h1>Cuenta de {{ cliente.usuario }} </h1><br>
+<h3> {{cliente.correo}}</h3>
+</article>
+<div>
+    <article class="saldo">
+        <p>Saldo actual: </p>
+        <p class="dinero">{{cliente.saldo}} €</p>
+    </article>
+<button><a [href]="'tel:' +34644319198">Contactar con el gestor</a></button>
+    <article>
+        <label for="password">Contraseña actual</label><br>
+        <input  type="password" id="password" placeholder="Contraseña"><br>
+              <label for="new-password">Nueva contraseña</label><br>
+        <input type="password" id="new-password" placeholder="Nueva contraseña"><br>
+        <button class="submit">Acceder</button>
+    </article>
+</div>
+</section>
+
+<p *ngIf="!cliente">Inicie Sesión para consultar sus datos</p>

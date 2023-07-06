@@ -69,14 +69,6 @@ public class ClienteService {
 		}
 		return null;
 	}
-	
-	// una forma simple para hacer pruebas de login es buscar el gestor por correo
-	// y contraseña
-	// esto solo es posible si no ciframos la contraseña
-	// por tanto no es viable para una aplicación real
-	// buscar info de Spring Security para securizar correctamente
-	public Optional<Cliente> login(String correo, String password) {
-		return clienteRepository.findFirstByCorreoAndPassword(correo, password);
-	}
+
 
 }

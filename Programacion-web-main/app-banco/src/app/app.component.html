@@ -1,1 +1,19 @@
+<header>
+    <article><a  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="/assets/banco.png" alt="LogoBanco"></a></article>
+    <h1>Banco</h1>
+    <nav class="main-menu">
+        <ul>
+            <li *ngIf="cliente"><a  routerLinkActive="activo" routerLink="/auth/login">Cerrar Sesión</a></li>
+            <li *ngIf="!cliente"><a  routerLinkActive="activo" routerLink="/auth/login">Iniciar Sesión</a></li>
+            <li><a  routerLinkActive="activo"routerLink="/pages/dashboard">Inicio</a></li>
+            <li class="dropdown-menu">Transferencias 
+               <ul class="submenu">
+                <li><a  routerLinkActive="activo"routerLink="/pages/transferencias-recibidas">Transferencias recibidas</a></li>
+                <li><a  routerLinkActive="activo"routerLink="/pages/transferencias-enviadas">Transferencias enviadas</a></li>
+                <li><a  routerLinkActive="activo"routerLink="/pages/nueva-transferencia">Nueva Transferencia</a></li>
+             </ul>
+            <li><a routerLinkActive="activo" routerLink="/pages/mi-cuenta" >Mi Cuenta</a></li>
+        </ul>
+    </nav>
+</header>
 <router-outlet></router-outlet>

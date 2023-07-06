@@ -1,0 +1,30 @@
+section {
+    text-align: center;
+    margin: 40px;
+}
+
+h2{
+    font-size: 30px;
+    margin: 40px;
+}
+
+input {
+    margin: 15px;
+    color: black;
+}
+
+input:focus{    background-color: whitesmoke;}
+
+label {
+    margin: auto;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.submit {
+    margin: 10px;
+    background-color: var(--Button);
+    font-weight: bolder;
+    color: black;
+    font-size: large;
+}
